@@ -140,7 +140,7 @@ class AudioEncoder(nn.Module):
         )
         self.ln_post = LayerNorm(n_state)
 
-    def forward(self, x: Tensor, include_embeddings: bool = False):
+    def forward(self, x: Tensor, include_embeddings: bool = True):
         """
         x : torch.Tensor, shape = (batch_size, n_mels, n_ctx)
             the mel spectrogram of the audio
